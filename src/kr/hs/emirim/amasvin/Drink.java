@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Drink {
 	String name;
 	int price;
-	int[] ices = {0, 50, 100, 150};
+	int[] ices = { 0, 50, 100, 150 };
 	int ice;
-	String[] cups = {"·¹±Ö·¯", "Á¡º¸"};
+	String[] cups = { "ë ˆê·¤ëŸ¬", "ì ë³´" };
 	String cup;
-	
+
 	public Drink(String name, int price) {
 		this.name = name;
 		this.price = price;
@@ -47,9 +47,9 @@ public class Drink {
 
 	public void setIce() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("¾óÀ½·®À» ¼±ÅÃÇÏ¼¼¿ä(1: 0%, 2: 50%, 3: 100%, 4: 150%) : ");
+		System.out.println("ì–¼ìŒëŸ‰ì„ ì„ íƒí•˜ì„¸ìš”(1: 0%, 2: 50%, 3: 100%, 4: 150%) : ");
 		int index = scanner.nextInt();
-		this.ice = ices[index-1];
+		this.ice = ices[index - 1];
 	}
 
 	public String getCup() {
@@ -58,18 +58,20 @@ public class Drink {
 
 	public void setCup() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("ÄÅÀ» ¼±ÅÃÇÏ¼¼¿ä(1: ·¹±Ö·¯, 2: Á¡º¸) : ");
+		System.out.println("ì»µì„ ì„ íƒí•˜ì„¸ìš”(1: ë ˆê·¤ëŸ¬, 2: ì ë³´) : ");
 		int index = scanner.nextInt();
-		this.cup = cups[index-1];
-		if((index-1)==1) {price+=500;}
+		this.cup = cups[index - 1];
+		if ((index - 1) == 1) {
+			price += 500;
+		}
 	}
 
 	@Override
 	public String toString() {
-		return name+": "+price+"¿ø";
+		return name + ": " + price + "ì›";
 	}
-	
+
 	public String toOrderString() {
-		return toString()+"\tÄÅ: "+cup+"\t¾óÀ½·®: "+ice+"%";
+		return toString() + "\tì»µ: " + cup + "\tì–¼ìŒëŸ‰: " + ice + "%";
 	}
 }

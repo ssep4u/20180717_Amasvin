@@ -3,7 +3,7 @@ package kr.hs.emirim.amasvin;
 import java.util.Scanner;
 
 public class BubbleTea extends Drink implements PearlSelectable {
-	String[] pearls= {"Å¸ÇÇ¿ÀÄ« ÆŞ","ÄÚÄÚ ÆŞ", "Á©¸® ÆŞ", "¾Ë·Î¿¡ ÆŞ"};
+	String[] pearls= {"íƒ€í”¼ì˜¤ì¹´ í„","ì½”ì½” í„", "ì ¤ë¦¬ í„", "ì•Œë¡œì— í„"};
 	String pearl;
 	
 	public BubbleTea(String name, int price) {
@@ -19,7 +19,7 @@ public class BubbleTea extends Drink implements PearlSelectable {
 	@Override
 	public void setPearl() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("ÆŞÀ» ¼±ÅÃÇÏ¼¼¿ä(1: Å¸ÇÇ¿ÀÄ« ÆŞ, 2: ÄÚÄÚ ÆŞ, 3: Á©¸® ÆŞ, 4: ¾Ë·Î¿¡ ÆŞ) : ");
+		System.out.println("í„ì„ ì„ íƒí•˜ì„¸ìš”(1: íƒ€í”¼ì˜¤ì¹´ í„, 2: ì½”ì½” í„, 3: ì ¤ë¦¬ í„, 4: ì•Œë¡œì— í„) : ");
 		int index = scanner.nextInt();
 		this.pearl = pearls[index-1];
 	}
@@ -31,8 +31,6 @@ public class BubbleTea extends Drink implements PearlSelectable {
 
 	@Override
 	public String toOrderString() {
-		return super.toOrderString()+"\tÆŞ: "+pearl;
+		return super.toOrderString()+"\tí„: "+pearl;
 	}
-	
-
 }

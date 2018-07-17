@@ -4,37 +4,37 @@ import java.util.ArrayList;
 
 public class Amasvin {
 	static ArrayList<Drink> menus = new ArrayList<Drink>();
-	
+
 	public static void main(String[] args) {
-		//¸Ş´º »ı¼ºÇÏÀÚ
+		// ë©”ë‰´ ìƒì„±í•˜ì
 		initMenu();
-		//¸Ş´º º¸¿©ÁÖ°í
+		// ë©”ë‰´ ë³´ì—¬ì£¼ê³ 
 		showMenu();
-		//ÁÖ¹® ¹ŞÀÚ
+		// ì£¼ë¬¸ ë°›ì
 		Order order = new Order(menus);
-		while(order.order()) {
+		while (order.order()) {
 			showMenu();
 		}
-		//´Ù ³¡³ª¸é Á¤¸®ÇØ¼­ º¸¿©ÁÖÀÚ
+		// ë‹¤ ëë‚˜ë©´ ì •ë¦¬í•´ì„œ ë³´ì—¬ì£¼ì
 		order.show();
-		// +³½ ±İ¾×À¸·Î °Å½º¸§µ· °è»êÇÏÀÚ
+		// +ë‚¸ ê¸ˆì•¡ìœ¼ë¡œ ê±°ìŠ¤ë¦„ëˆ ê³„ì‚°í•˜ì
 	}
 
 	private static void showMenu() {
 		int i = 0;
 		for (Drink drink : menus) {
-			System.out.println((++i)+". "+drink);
+			System.out.println((++i) + ". " + drink);
 		}
 	}
 
 	private static void initMenu() {
-		menus.add(new Coffee("¾Æ¸Ş¸®Ä«³ë", 1800));
-		menus.add(new Coffee("Ä«Æä¶ó¶¼", 2800));
-		menus.add(new Coffee("¹Ù´Ò¶ó ¶ó¶¼", 3000));
-		
-		menus.add(new BubbleTea("¿À¸®Áö³Î ¹ĞÅ©Æ¼", 2900));
-		menus.add(new BubbleTea("ÇÏµ¿³ìÂ÷ ¹öºíÆ¼", 3500));
-		menus.add(new BubbleTea("·¹ÀÚ¸ù ¹öºí¿¡ÀÌµå", 3700));
+		menus.add(new Coffee("ì•„ë©”ë¦¬ì¹´ë…¸", 1800));
+		menus.add(new Coffee("ì¹´í˜ë¼ë–¼", 2800));
+		menus.add(new Coffee("ë°”ë‹ë¼ ë¼ë–¼", 3000));
+
+		menus.add(new BubbleTea("ì˜¤ë¦¬ì§€ë„ ë°€í¬í‹°", 2900));
+		menus.add(new BubbleTea("í•˜ë™ë…¹ì°¨ ë²„ë¸”í‹°", 3500));
+		menus.add(new BubbleTea("ë ˆìëª½ ë²„ë¸”ì—ì´ë“œ", 3700));
 	}
 
 }

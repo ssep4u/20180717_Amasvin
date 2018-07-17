@@ -10,7 +10,7 @@ public class Order {
 		this.menus = menus;
 	}
 	public boolean order() {
-		System.out.println("¸î ¹øÀ» ÁÖ¹®ÇÏ½Ã°Ú½À´Ï±î?(0: ³¡)");
+		System.out.println("ëª‡ ë²ˆì„ ì£¼ë¬¸í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(0: ë)");
 		Scanner scanner = new Scanner(System.in);
 		int index = scanner.nextInt();
 		
@@ -42,7 +42,7 @@ public class Order {
 		for (Drink drink : orderDrinks) {
 			System.out.println(drink.toOrderString());
 		}
-		System.out.println("ÃÑ ±İ¾×: "+getSumPrice()+"¿ø");
+		System.out.println("ì´ ê¸ˆì•¡: "+getSumPrice()+"ì›");
 	}
 	
 	
