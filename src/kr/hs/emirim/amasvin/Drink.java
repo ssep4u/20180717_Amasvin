@@ -18,7 +18,6 @@ public class Drink {
 	}
 
 	public Drink(Drink drink) {
-		super();
 		name = drink.name;
 		price = drink.price;
 		cup = drink.cup;

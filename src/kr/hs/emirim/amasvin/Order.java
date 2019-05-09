@@ -44,7 +44,4 @@ public class Order {
 		}
 		System.out.println("총 금액: "+getSumPrice()+"원");
 	}
-	
-	
-
 }
